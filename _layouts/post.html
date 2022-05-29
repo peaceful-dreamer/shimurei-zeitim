@@ -1,0 +1,17 @@
+---
+layout: default
+permalink: /author/
+
+---
+
+<h3>{{ page.title }}</h3>
+
+<p>
+  {{ page.date | date:"%d.%m.%Y" }}
+  {% assign author = site.authors | where: 'short_name', page.author | first %}
+  {% if author %}
+    - <a class="text-body text-decoration-none" href="{{ author.url }}">{{ author.name }}</a>
+  {% endif %}
+</p>
+
+{{ content }}
