@@ -15,3 +15,13 @@ permalink: /author/
 </p>
 
 {{ content }}
+
+<div class="row mt-5 py-2 d-flex align-items-center justify-content-center border rounded-3 border-success">
+  <div class="col-4">
+    <h4><a class="text-body text-decoration-none" href="{{ author.url }}">{{ author.name }}</h4></a>
+    <code class="text-dark">{{ author.content }}</code>
+  </div>
+  <div class="col-2">
+    <img src="/assets/images/profile/{{ author.permalink }}.png" height="50%" max-height="150px" class="rounded-circle" alt="">
+  </div>
+</div>
